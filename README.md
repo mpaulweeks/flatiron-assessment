@@ -1,5 +1,8 @@
 # flatiron-assessment
-[View all changes](https://github.com/mpaulweeks/flatiron-assessment/compare/f21b534c490ecc43e1f515fa38271a3fd2bcc61a...master), original README below
+- [view all code changes](https://github.com/mpaulweeks/flatiron-assessment/compare/f21b534c490ecc43e1f515fa38271a3fd2bcc61a...master)
+- [test website](https://mpaulweeks.github.io/flatiron-assessment/)
+
+original README copied below
 
 ---
 
