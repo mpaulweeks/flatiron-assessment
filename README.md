@@ -1,3 +1,8 @@
+# flatiron-assessment
+[View all changes](https://github.com/mpaulweeks/flatiron-assessment/compare/f21b534c490ecc43e1f515fa38271a3fd2bcc61a...master), original README below
+
+---
+
 # JavaScript Assessment
 
 For this assignment, we'll be working with an Instagram-style domain. We have two models - Image and Comment.
