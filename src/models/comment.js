@@ -16,11 +16,11 @@ class Comment {
   }
 
   findImage(imageId) {
-    // can't access Image.all[imageId] because it might shift if modified
-    // safer to iterate and compare ids
+    // could access Image.all[imageId], but it's safer to iterate and compare ids
     let imageObj = undefined;
     Image.all.forEach(image => {
-      if (image.id === imageId){
+      // image gets set to null when deleted
+      if (image && image.id === imageId){
         imageObj = image;
       }
     });
