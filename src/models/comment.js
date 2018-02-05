@@ -8,7 +8,9 @@ class Comment {
     this.id = _Comment_id++;
     this.commentContent = comment;
     this.image = this.findImage(imageId);
-    _Comment_all.push(this);
+    if (this.image) {
+      _Comment_all.push(this);
+    }
   }
 
   static get all() {
@@ -32,13 +34,18 @@ class Comment {
     const thisComment = this;
     let added = false;
     imageObj.comments.forEach(imageComment => {
-      added = added || thisComment.id === imageComment.id;
+      if (thisComment.id === imageComment.id){
+        added = true;
+      }
+      if (thisComment.commentContent === imageComment.commentContent){
+        added = true;
+      }
     });
     if (!added){
       imageObj.comments.push(thisComment);
+      return imageObj;
     }
-
-    return imageObj;
+    return null;
   }
 
   commentEl() {

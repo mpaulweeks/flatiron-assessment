@@ -14,8 +14,12 @@ class CommentsController {
         const imageId = parseInt(event.target.getAttribute('data-id'));
         const commentInput = document.getElementById(`comment-description-${imageId}`);
         const newComment = new Comment(commentInput.value, imageId);
-        commentInput.value = '';
-        this.render(newComment);
+        if (newComment.image) {
+          commentInput.value = '';
+          this.render(newComment);
+        } else {
+          alert('comment already exists!');
+        }
       }, false);
     });
   }
